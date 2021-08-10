@@ -23,7 +23,8 @@ To repack:
         $ ./repack.sh [original_zImage] [output.cpio] [new_zImage]
 
    e) Resize new zImage to size of original zImage
-        $ dd if=[new_zImage] of=[new_zImage_resized] bs=[original_zImage_size] conv=sync
+        $ dd if=[new_zImage] of=[new_zImage_resized] bs=[original_zImage_size] count=1 conv=sync
+	$ dd if=new of=new_zImage_resized bs=5814136  conv=sync count=1
 
 = Original Documentation =
 
